@@ -173,13 +173,7 @@ $ catkin_make
 
 ---
 
-# ７．ライセンス
-
-[GNU General Public License v3.0](https://github.com/Mochizuki12/Robosys2021_Task1/blob/main/COPYING)
-
----
-
-# ８．参考サイト
+# ７．参考サイト
 
 > imo.Lab 加速度センサーから軸廻り角度への変換計算  
 > https://garchiving.com/angle-from-acceleration/
@@ -188,6 +182,18 @@ $ catkin_make
 > 即戦力モノづくり!エンジニアへの道標 相補フィルタのしくみを解明してみる【加速度・ジャイロセンサ】 
 > https://depfields.com/complementary-filter/
 
-# ９．使用した外部ライブラリ
-mpu6050
-https://github.com/m-rtijn/mpu6050.git
+---
+
+# ８．使用した外部ライブラリ
+
+> mpu6050
+> https://github.com/m-rtijn/mpu6050.git
+
+> pigpio
+> http://abyz.me.uk/rpi/pigpio/index.html
+
+---
+
+# ９．ライセンス
+
+[GNU General Public License v3.0](https://github.com/Mochizuki12/Robosys2021_Task1/blob/main/COPYING)
