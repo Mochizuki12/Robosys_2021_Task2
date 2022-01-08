@@ -42,7 +42,8 @@
 
 下の図のように配線してください．
 
-![7seg_ブレッドボード](https://user-images.githubusercontent.com/92071009/146275109-d0719f07-5a0c-4839-9b98-1e867ac421b9.png)
+![スタビライザ―](https://user-images.githubusercontent.com/92071009/148651935-22615df1-89c8-43bb-befb-9fa62dd3e174.png
+)
 
 ---
 
