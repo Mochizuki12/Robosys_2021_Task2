@@ -1,0 +1,6 @@
+<launch>
+
+    <node pkg="Robosys_2021_Task2" name="servo" type="servo.py"/>
+    <node pkg="Robosys_2021_Task2" name="accelerometer" type="accelerometer.py"/>
+
+</launch>

@@ -5,12 +5,12 @@ from std_msgs.msg import Float32MultiArray
 
 pi = pigpio.pi()
 
-def cb(messege):
+Servo_pinX = 23
+Servo_pinY = 12
+
+def callback(messege):
 
     degrees = messege.data
-    
-    Servo_pinX = 18
-    Servo_pinY = 12
 
     pulseX = degrees[0] * 925 / 90 + 1425
 
@@ -35,5 +35,5 @@ def cb(messege):
 
 if __name__ == '__main__':
     rospy.init_node('servo')
-    sub = rospy.Subscriber('accelgyro', Float32MultiArray, cb)
+    sub = rospy.Subscriber('accelgyro', Float32MultiArray, callback)
     rospy.spin()

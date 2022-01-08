@@ -9,10 +9,28 @@ pub = rospy.Publisher('accelgyro', Float32MultiArray, queue_size=1)
 rate = rospy.Rate(1000)
 Xdeg = 0
 Ydeg = 0
-Zdeg = 0
+#Zdeg = 0   #When want to use the Z-axis Stabillizer
 mpu = mpu6050(0x68)
 degrees = [0,0,0]
 dt = 0.001
+
+def accel_threshold(x,y,z):
+
+    if 0 < z and z < 0.001:
+        accel_data['z'] = 0.001
+
+
+    if 0 > z and z > -0.001:
+        accel_data['z'] = -0.001
+
+
+    if 0 < y and y < 0.001:
+        accel_data['y'] = 0.001
+
+
+    if 0 > y and y > -0.001:
+        accel_data['y'] = -0.001
+
 
 while not rospy.is_shutdown():
 
@@ -20,9 +38,10 @@ while not rospy.is_shutdown():
 
     accel_data = mpu.get_accel_data()
 
-    gyro_predata = gyro_data
+    accel_threshold(gyro_data['x'],gyro_data['y'],gyro_data['z'])
 
-    Xdeg = 0.9 * (Xdeg + gyro_data['x'] * dt) + 0.1 * (math.atan2(accel_data['y'] , accel_data['z']) * 180 / math.pi)
+
+    Xdeg = 0.93 * (Xdeg + gyro_data['x'] * dt) + 0.07 * (math.atan2(accel_data['y'] , accel_data['z']) * 180 / math.pi)
 
     if Xdeg > 90:
         Xdeg = 90
@@ -30,7 +49,7 @@ while not rospy.is_shutdown():
     if Xdeg < -90:
         Xdeg = -90
 
-    Ydeg = 0.9 * (Ydeg + gyro_data['y'] * dt) + 0.1 * (math.atan2(accel_data['x'] , math.sqrt(accel_data['z'] **2 + accel_data['y'] ** 2)) * 180 / math.pi)
+    Ydeg = 0.91 * (Ydeg + gyro_data['y'] * dt) + 0.09 * (math.atan2(accel_data['x'] , math.sqrt(accel_data['z'] **2 + accel_data['y'] ** 2)) * 180 / math.pi)
     
     if Ydeg > 90:
         Ydeg = 90
@@ -40,7 +59,7 @@ while not rospy.is_shutdown():
 
     degrees[0] = Xdeg
     degrees[1] = Ydeg
-    degrees[2] = Zdeg
+    #degrees[2] = Zdeg 
 
     degrees_pub = Float32MultiArray(data = degrees)
 
