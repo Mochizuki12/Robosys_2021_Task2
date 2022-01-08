@@ -166,7 +166,7 @@ $ catkin_make
 
 # ７．参考サイト
 
-相補性フィルタを実装するために以下のサイトを参考にしました．
+相補フィルタを実装するために以下のサイトを参考にしました．
 
 > imo.Lab 加速度センサーから軸廻り角度への変換計算  
 > https://garchiving.com/angle-from-acceleration/
