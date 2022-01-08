@@ -63,13 +63,9 @@ $ sudo apt install unzip
 
 ```
 $ wget https://github.com/joan2937/pigpio/archive/master.zip
-
 $ unzip master.zip
-
 $ cd pigpio-master
-
 $ make
-
 $ sudo make install
 ```
 >　参考サイト：pigpio library  
@@ -98,9 +94,7 @@ pip install mpu6050-raspberrypi
 
 ```
 $ cd .local/lib/python3.8/site-packages/mpu6050
-
 $ chmod 777 mpu6050.py
-
 $ chmod 777 __init__.py
 ```
 
@@ -132,11 +126,8 @@ $ sudo i2cdetect -y 1
 
 ```
 $ sudo gpasswd -a $USER gpio
-
 $ sudo adduser $USER gpio
-
 $ sudo adduser $USER i2c
-
 $ sudo chmod 777 /dev/ttyAMA0
 ```
 
@@ -153,7 +144,7 @@ $ sudo chmod 777 /dev/ttyAMA0
 パッケージをROSのworkspaceのsrcフォルダで以下のコマンドを上から順に実行してください．
 
 ```
-$ 
+$ git clone 
 
 $ cd ../
 
@@ -186,10 +177,10 @@ $ catkin_make
 
 # ８．使用した外部ライブラリ
 
-> mpu6050
+> mpu6050  
 > https://github.com/m-rtijn/mpu6050.git
 
-> pigpio
+> pigpio  
 > http://abyz.me.uk/rpi/pigpio/index.html
 
 ---
