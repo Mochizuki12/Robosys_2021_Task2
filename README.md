@@ -192,7 +192,7 @@ $ sudo killall pigpiod
 # ６．デモ動画
 上記の手順を踏み実際に動作させた動画です．動画ではわかりやすいように使用例として、他の部品を使っています．
 
-[ROSを使用した相補フィルタのスタビライザ](https://youtu.be/__I8KDhq_y0)
+[ROSを使用した相補フィルタのスタビライザ](https://youtu.be/bdl5ouGuAYI)
 
 ---
 
