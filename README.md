@@ -188,4 +188,6 @@ $ catkin_make
 > 即戦力モノづくり!エンジニアへの道標 相補フィルタのしくみを解明してみる【加速度・ジャイロセンサ】 
 > https://depfields.com/complementary-filter/
 
-# ９．使用したプログラム
+# ９．使用した外部ライブラリ
+mpu6050
+https://github.com/m-rtijn/mpu6050.git
