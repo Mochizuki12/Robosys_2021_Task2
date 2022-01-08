@@ -187,4 +187,4 @@ $ catkin_make
 
 # ９．ライセンス
 
-[GNU General Public License v3.0](https://github.com/Mochizuki12/Robosys2021_Task1/blob/main/COPYING)
+[BSD 3-Clause "New" or "Revised" License](https://github.com/Mochizuki12/Robosys2021_Task1/blob/main/COPYING)
